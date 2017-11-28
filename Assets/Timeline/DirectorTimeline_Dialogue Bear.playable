@@ -285,20 +285,6 @@ MonoBehaviour:
     m_DisplayName: Active
     m_Version: 1
   m_PostPlaybackState: 0
---- !u!114 &114239149864914224
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1977359656, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 3748c58ddded341339b2c9b2fcd6a99e, type: 3}
-  m_Loop: 0
-  m_bufferingTime: 0.1
 --- !u!114 &114243023845754920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -328,6 +314,34 @@ MonoBehaviour:
   m_ApplyOffsets: 0
   m_AvatarMask: {fileID: 0}
   m_ApplyAvatarMask: 1
+--- !u!114 &114246503588670428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1977359656, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: a2037ef331ca5421bbb007398e284da8, type: 3}
+  m_Loop: 0
+  m_bufferingTime: 0.1
+--- !u!114 &114259185636624534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1977359656, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 8300000, guid: 6b655f5aae91b462ab688c9515b777c6, type: 3}
+  m_Loop: 0
+  m_bufferingTime: 0.1
 --- !u!114 &114281711509397474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -368,17 +382,17 @@ MonoBehaviour:
   m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
-  - m_Start: 6.85
+  - m_Start: 0
     m_ClipIn: 0
-    m_Asset: {fileID: 114239149864914224}
-    m_UnderlyingAsset: {fileID: 8300000, guid: aeab73822157f5346b40a1726e6e3d4c, type: 3}
-    m_Duration: 6.937482993197279
+    m_Asset: {fileID: 114246503588670428}
+    m_UnderlyingAsset: {fileID: 8300000, guid: a2037ef331ca5421bbb007398e284da8, type: 3}
+    m_Duration: 16.34684807256236
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114372404551210650}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendOutDuration: 0.013514739229027128
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -424,18 +438,18 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Bear
+    m_DisplayName: rabbit
     m_Version: 1
-  - m_Start: 17.21666666666667
-    m_ClipIn: 0.35
-    m_Asset: {fileID: 114393146700364390}
-    m_UnderlyingAsset: {fileID: 8300000, guid: d62c69d0d0995f3409f9ea4762d551d5, type: 3}
-    m_Duration: 5.650000000000001
+  - m_Start: 16.333333333333332
+    m_ClipIn: 0
+    m_Asset: {fileID: 114259185636624534}
+    m_UnderlyingAsset: {fileID: 8300000, guid: 6b655f5aae91b462ab688c9515b777c6, type: 3}
+    m_Duration: 11.5
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114372404551210650}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
+    m_BlendInDuration: 0.013514739229027128
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -470,7 +484,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: bear_thanks
+    m_DisplayName: rabbit_thanks
     m_Version: 1
 --- !u!114 &114379722585202748
 MonoBehaviour:
@@ -549,20 +563,6 @@ MonoBehaviour:
     m_DisplayName: Active
     m_Version: 1
   m_PostPlaybackState: 0
---- !u!114 &114393146700364390
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1977359656, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 9dddd8158633441a18e2d0f3dc5dbbb5, type: 3}
-  m_Loop: 0
-  m_bufferingTime: 0.1
 --- !u!114 &114488488463605792
 MonoBehaviour:
   m_ObjectHideFlags: 1
