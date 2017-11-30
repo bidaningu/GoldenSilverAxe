@@ -5,20 +5,25 @@ using UnityEngine.Playables;
 
 public class DialogueSelect : MonoBehaviour
 {
-    private bool isTouched = false;
-    private Vector3 scaleVector = new Vector3(2, 2, 2);
+    public bool isTouched = false;
+    private Vector3 scaleVector = new Vector3(1.5f, 1.5f, 1.5f);
     private Vector3 originVector = new Vector3(1, 1, 1);
-    public PlayableDirector pd;
+    public GameObject pd;
 
     private void Update()
     {
+        if (Input.GetAxis("Fire2") > 0.1f)
+        {
+            Debug.Log("클릭");
+            if (isTouched)
+            {
+                pd.SetActive(true);
+            }
+        }
+
         if (isTouched)
         {
             transform.localScale = scaleVector;
-            if (Input.GetButtonDown("Fire2"))
-            {
-                pd.Play();
-            }
         }
         else
         {

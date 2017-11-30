@@ -23,12 +23,15 @@ public class EventTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("OnTriggerEnter");
-        player.transform.position = aniStartPos.position;
-        EventStart();
-        gameObject.SetActive(false);
-        VRController.enabled = false;
-        EventBgm.Play();
-        BirdFx.Stop();
+        if (other.CompareTag("Player"))
+        {
+            player.transform.position = aniStartPos.position;
+            EventStart();
+            gameObject.SetActive(false);
+            VRController.enabled = false;
+            EventBgm.Play();
+            BirdFx.Stop();
+        }
     }
 
     private void EventStart()
