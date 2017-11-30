@@ -8,7 +8,7 @@ public class PlayerMoveTest : MonoBehaviour
     private Camera cam;
     private float inputX, inputZ;
     private Vector3 setPosition;
-    private float speed = 0.3f;
+    private float speed = 0.1f;
 
     private void Start()
     {
@@ -28,8 +28,9 @@ public class PlayerMoveTest : MonoBehaviour
         setPosition = cam.transform.forward * inputZ * speed;
         setPosition += cam.transform.right * inputX * speed;
         setPosition.y = 0;
-        transform.position += setPosition;
-
+        //transform.position += setPosition;
+        var rb = GetComponent<Rigidbody>();
+        rb.MovePosition(rb.position + setPosition);
         if (Input.GetButton("Cancel"))
         {
             Debug.Log("메뉴키");
