@@ -22,14 +22,14 @@ public class GameManager : MonoBehaviour
         directorObject = pd;
         playerObject.SetActive(false);
         lightObject.SetActive(false);
-        SceneManager.LoadScene("Action_02", LoadSceneMode.Additive);
+        SceneManager.LoadScene("MissionPlay_Scene", LoadSceneMode.Additive);
     }
 
     public static void ReturnStroyScene()
     {
         playerObject.SetActive(true);
         lightObject.SetActive(true);
-        SceneManager.UnloadSceneAsync("Action_02");
+        SceneManager.UnloadSceneAsync("MissionPlay_Scene");
         directorObject.Play();
     }
 
