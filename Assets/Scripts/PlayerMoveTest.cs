@@ -24,14 +24,18 @@ public class PlayerMoveTest : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        inputX = Input.GetAxisRaw("Horizontal");
-        inputZ = Input.GetAxisRaw("Vertical");
+        if (Input.GetButton("MoveConfirm"))
+        {
+            inputX = Input.GetAxisRaw("Horizontal");
+            inputZ = Input.GetAxisRaw("Vertical");
 
-        setPosition = cam.transform.forward * inputZ * speed;
-        setPosition += cam.transform.right * inputX * speed;
-        setPosition.y = 0;
-        //transform.position += setPosition;
-        rb.MovePosition(rb.position + setPosition);
+            setPosition = cam.transform.forward * inputZ;
+            setPosition += cam.transform.right * inputX;
+            setPosition.y = 0;
+            //transform.position += setPosition;
+            rb.MovePosition(rb.position + setPosition.normalized * speed);
+        }
+
         if (Input.GetButton("Cancel"))
         {
             Debug.Log("메뉴키");

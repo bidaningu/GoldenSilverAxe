@@ -33,8 +33,9 @@ public class SceneChanger : MonoBehaviour
                     SceneManager.LoadScene("MountainGod_Scene");
                     break;
 
-                case "MountainGod_Scene":
-                    SceneManager.LoadScene("Ending_Scene");
+                case "Ending_Scene":
+                case "Ending2_Scene":
+                    SceneManager.LoadScene("MainMenu");
                     break;
 
                 default:
