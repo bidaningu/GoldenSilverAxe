@@ -6,14 +6,10 @@ using UnityEngine.Video;
 
 public class SpeedUpMoviePlay : MonoBehaviour
 {
-    PlayableDirector playerTimeLine;
-
-    void Start()
-    {
-    }
+    private PlayableDirector playerTimeLine;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetButton("Fire2"))
         {

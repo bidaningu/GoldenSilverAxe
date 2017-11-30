@@ -9,6 +9,7 @@ public class PlayerMoveTest : MonoBehaviour
     private float inputX, inputZ;
     private Vector3 setPosition;
     private float speed = 0.1f;
+    private Rigidbody rb;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class PlayerMoveTest : MonoBehaviour
         //set and start fade to
         SteamVR_Fade.Start(Color.clear, 2f);
         cam = Camera.main;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -29,7 +31,6 @@ public class PlayerMoveTest : MonoBehaviour
         setPosition += cam.transform.right * inputX * speed;
         setPosition.y = 0;
         //transform.position += setPosition;
-        var rb = GetComponent<Rigidbody>();
         rb.MovePosition(rb.position + setPosition);
         if (Input.GetButton("Cancel"))
         {
