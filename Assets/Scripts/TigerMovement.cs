@@ -6,6 +6,7 @@ public class TigerMovement : MonoBehaviour
 {
 	public Transform animalStopPoint;
 	public Transform fadeInOutPoint;
+	public float distance = 2f;
 
 	private UnityEngine.AI.NavMeshAgent nav;
 
@@ -26,7 +27,7 @@ public class TigerMovement : MonoBehaviour
 		{
 			nav.SetDestination(fadeInOutPoint.position);
 
-			if ((transform.position - fadeInOutPoint.position).magnitude < 2f)
+			if ((transform.position - fadeInOutPoint.position).magnitude < distance)
 			{
 				Destroy(gameObject);
 			}
