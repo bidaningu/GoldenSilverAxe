@@ -14,7 +14,6 @@ public class DialogueSelect : MonoBehaviour
     {
         if (isTouched)
         {
-            transform.localScale = scaleVector;
             if (Input.GetAxis("Fire2") > 0.1f)
             {
                 Debug.Log("클릭");
@@ -30,19 +29,17 @@ public class DialogueSelect : MonoBehaviour
                 pd.Play();
             }
         }
-        else
-        {
-            transform.localScale = originVector;
-        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         isTouched = true;
+        transform.localScale = scaleVector;
     }
 
     private void OnTriggerExit(Collider other)
     {
         isTouched = false;
+        transform.localScale = originVector;
     }
 }

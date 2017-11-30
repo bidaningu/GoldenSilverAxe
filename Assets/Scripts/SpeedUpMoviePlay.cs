@@ -11,12 +11,12 @@ public class SpeedUpMoviePlay : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetButton("Fire2"))
+        if (Input.GetButton("Fire1"))
         {
             Time.timeScale = 5f;
             GetComponent<VideoPlayer>().playbackSpeed = 5f;
         }
-        else if (Input.GetButtonUp("Fire2"))
+        else if (Input.GetButtonUp("Fire1"))
         {
             Time.timeScale = 1f;
             GetComponent<VideoPlayer>().playbackSpeed = 1f;
